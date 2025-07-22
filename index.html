@@ -1,112 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Produtos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualize nosso catálogo completo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <div class="logo-container">
-                        <img src="Logo.jpg" alt="Logo da Empresa" class="logo-img"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="logo-fallback"><span>🏢</span></div>
-                    </div>
-                    <div class="logo-text">
-                        <h1>Catálogo de Produtos</h1>
-                        <p>Consulta Online - Sem Preços</p>
-                    </div>
-                </div>
-                <div class="header-info">
-                    <div class="contact-info">
-                        <span>📞 Entre em contato com seu representante</span>
-                        <span>        PMG, a entrega nos move até você! </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+  <header>
+    <div class="logo-header">
+      <img src="logo.png" alt="PMG Logo" class="logo-img" />
+      <h1>Visualize nosso catálogo completo</h1>
+    </div>
+  </header>
+  <main>
+    <div class="pdf-container">
+      <iframe src="catalogo.pdf" title="Catálogo PDF" frameborder="0"></iframe>
+    </div>
+    <div class="pdf-download">
+      <a href="catalogo.pdf" download>Baixar catálogo em PDF</a>
+    </div>
+  </main>
 
-    <main class="main-content">
-        <div class="container">
-            <section class="search-section">
-                <div class="info-banner">
-                    <div class="info-icon">ℹ️</div>
-                    <div class="info-text">
-                        <strong>Importante:</strong> Os preços não são exibidos neste catálogo. Para consultar valores e fazer pedidos, entre em contato com seu representante comercial.
-                    </div>
-                </div>
-                <div class="search-header">
-                    <h2>🔍 Buscar Produtos</h2>
-                    <p>Digite o nome ou código do produto que deseja consultar</p>
-                </div>
-                <div class="search-controls">
-                    <div class="search-box">
-                        <input type="text" id="searchInput" placeholder="Digite o nome ou código do produto..." autocomplete="off">
-                        <button id="clearSearch" class="btn-clear" type="button">Limpar</button>
-                    </div>
-                </div>
-                
-            </section>
-
-            <section class="results-section">
-                <div class="results-header">
-                    <div class="results-count">
-                        <span id="totalProducts">Carregando produtos...</span>
-                    </div>
-                </div>
-                <div class="table-wrapper">
-                    <table id="productsTable" class="products-table">
-                        <thead>
-                            <tr>
-                                <th>Código</th>
-                                <th>Produto</th>
-                                <th>Unidade de Venda</th>
-                            </tr>
-                        </thead>
-                        <tbody id="productsTableBody"></tbody>
-                    </table>
-                </div>
-                <div class="loading" id="loading">
-                    <div class="spinner"></div>
-                    <p>Carregando produtos do arquivo CSV...</p>
-                </div>
-                <div class="error-message" id="errorMessage">
-                    <div class="error-icon">⚠️</div>
-                    <h3>Erro ao carregar produtos</h3>
-                    <p id="errorText">Verifique se o arquivo 'Produtos.csv' está na mesma pasta do site.<br>Execute por um servidor local (ex: Live Server, Python ou Node.js).</p>
-                    <button id="retryBtn" class="btn-retry" type="button">Tentar Novamente</button>
-                </div>
-                <div class="no-results" id="noResults">
-                    <div class="no-results-icon">🔍</div>
-                    <h3>Nenhum produto encontrado</h3>
-                    <p>Tente usar termos de busca diferentes.</p>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>&copy; 2025 - Todos os direitos reservados</p>
-                    <p>Desenvolvido por <strong>Adalberto BI</strong></p>
-                </div>
-                <div class="footer-links">
-                    <p>Sistema de Consulta Online</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <a href="https://wa.me/5512933008644" target="_blank" class="whatsapp-button" aria-label="WhatsApp representante">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>
