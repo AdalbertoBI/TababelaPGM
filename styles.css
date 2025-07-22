@@ -35,7 +35,9 @@ header {
   border-radius: 8px;
   border: 2px solid #eee;
   background: #fff;
-  box-shadow: 0 1px 7px #0002;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  object-position: center;
 }
 
 .logo-header h1 {
@@ -112,6 +114,25 @@ main {
 
 .whatsapp-button:hover {
   transform: scale(1.1);
+}
+
+/* Fallback para ícone WhatsApp se Font Awesome falhar */
+.whatsapp-button::before {
+  content: "💬";
+  font-size: 24px;
+}
+
+.whatsapp-button i {
+  font-size: 28px;
+}
+
+/* Se o Font Awesome carregar, ocultar o emoji fallback */
+.fa-whatsapp {
+  position: relative;
+}
+
+.fa-whatsapp::before {
+  content: "\f232" !important;
 }
 
 /* Responsive for mobile */
